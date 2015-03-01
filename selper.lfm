@@ -1,0 +1,99 @@
+object frmSelPer: TfrmSelPer
+  Left = 436
+  Height = 249
+  Top = 288
+  Width = 530
+  Caption = 'Seleção de Período'
+  ClientHeight = 249
+  ClientWidth = 530
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.2.6.0'
+  object lbInicio: TLabeledEdit
+    Left = 56
+    Height = 21
+    Top = 90
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = lbInicio
+    EditLabel.AnchorSideRight.Control = lbInicio
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = lbInicio
+    EditLabel.Left = 56
+    EditLabel.Height = 13
+    EditLabel.Top = 74
+    EditLabel.Width = 80
+    EditLabel.Caption = 'Início Período'
+    EditLabel.ParentColor = False
+    TabOrder = 0
+    Text = '20150101'
+  end
+  object lbFim: TLabeledEdit
+    Left = 280
+    Height = 21
+    Top = 114
+    Width = 80
+    EditLabel.AnchorSideLeft.Control = lbFim
+    EditLabel.AnchorSideRight.Control = lbFim
+    EditLabel.AnchorSideRight.Side = asrBottom
+    EditLabel.AnchorSideBottom.Control = lbFim
+    EditLabel.Left = 280
+    EditLabel.Height = 13
+    EditLabel.Top = 98
+    EditLabel.Width = 80
+    EditLabel.Caption = 'Fim Período'
+    EditLabel.ParentColor = False
+    TabOrder = 1
+    Text = '20150131'
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 13
+    Top = 9
+    Width = 25
+    Caption = 'Início'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 280
+    Height = 13
+    Top = 9
+    Width = 22
+    Caption = 'Final'
+    ParentColor = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 430
+    Height = 22
+    Top = 208
+    Width = 75
+    Caption = 'OK'
+    OnClick = BitBtn1Click
+    TabOrder = 2
+  end
+  object BitBtn2: TBitBtn
+    Left = 349
+    Height = 22
+    Top = 208
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = BitBtn2Click
+    TabOrder = 3
+  end
+  object Calendar1: TCalendar
+    Left = 24
+    Height = 160
+    Top = 26
+    Width = 225
+    DateTime = 42058
+    TabOrder = 4
+  end
+  object Calendar2: TCalendar
+    Left = 280
+    Height = 160
+    Top = 26
+    Width = 225
+    AutoSize = True
+    DateTime = 42058
+    TabOrder = 5
+  end
+end

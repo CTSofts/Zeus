@@ -1,0 +1,73 @@
+object frmSelFil: TfrmSelFil
+  Left = 536
+  Height = 284
+  Top = 214
+  Width = 427
+  Caption = 'Seleção de Filial'
+  ClientHeight = 284
+  ClientWidth = 427
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.2.6.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 42
+    Top = 242
+    Width = 427
+    Align = alBottom
+    ClientHeight = 42
+    ClientWidth = 427
+    TabOrder = 0
+    object SpeedButton1: TSpeedButton
+      Left = 336
+      Height = 22
+      Top = 10
+      Width = 80
+      Caption = 'Ok'
+      Flat = True
+      OnClick = SpeedButton1Click
+    end
+    object SpeedButton2: TSpeedButton
+      Left = 224
+      Height = 22
+      Top = 10
+      Width = 80
+      Caption = 'Cancelar'
+      Flat = True
+      OnClick = SpeedButton2Click
+    end
+    object lbFils: TListBox
+      Left = 8
+      Height = 40
+      Top = 0
+      Width = 176
+      ItemHeight = 0
+      TabOrder = 0
+      Visible = False
+    end
+  end
+  object CheckGroup1: TCheckGroup
+    Left = 0
+    Height = 242
+    Top = 0
+    Width = 427
+    Align = alClient
+    AutoFill = True
+    Caption = 'Selecione as Empresas'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.TopBottomSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    TabOrder = 1
+  end
+  object DataSource1: TDataSource
+    DataSet = DM.dbfiliais
+    OnDataChange = DataSource1DataChange
+    left = 288
+    top = 64
+  end
+end

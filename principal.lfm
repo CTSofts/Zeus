@@ -1,0 +1,61 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 355
+  Height = 461
+  Top = 179
+  Width = 806
+  Caption = 'Zeus 1.0 - Copyright by Celito Tkatch 2015'
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '1.2.6.0'
+  object ActionList1: TActionList
+    left = 104
+    top = 52
+    object CPag: TAction
+      Category = 'Relatorios'
+      Caption = 'Contas a Pagar'
+      OnExecute = CPagExecute
+    end
+    object Recibos: TAction
+      Category = 'Documentos'
+      Caption = 'Recibos'
+    end
+    object Anuencia: TAction
+      Category = 'Documentos'
+      Caption = 'Carta de Anuência'
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 32
+    top = 52
+    object MenuItem5: TMenuItem
+      Caption = 'Documentos'
+      object MenuItem6: TMenuItem
+        Action = Recibos
+      end
+      object MenuItem7: TMenuItem
+        Action = Anuencia
+      end
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Relatórios'
+      object MenuItem3: TMenuItem
+        Action = CPag
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Gráficos'
+    end
+    object MenuItem4: TMenuItem
+      Caption = 'Configurações'
+      OnClick = MenuItem4Click
+    end
+    object MenuItem8: TMenuItem
+      Caption = 'Sair'
+      OnClick = MenuItem8Click
+    end
+  end
+  object frCSVExport1: TfrCSVExport
+    left = 162
+    top = 62
+  end
+end

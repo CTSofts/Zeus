@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="9"/>
+    <PathDelim Value="\"/>
+    <General>
+      <SessionStorage Value="InProjectDir"/>
+      <MainUnit Value="0"/>
+      <Title Value="Zeus"/>
+      <ResourceType Value="res"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <i18n>
+      <EnableI18N LFM="False"/>
+    </i18n>
+    <VersionInfo>
+      <StringTable ProductVersion=""/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="Default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="5">
+      <Item1>
+        <PackageName Value="DBFLaz"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="lazreport"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="SQLDBLaz"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="LCL"/>
+      </Item5>
+    </RequiredPackages>
+    <Units Count="7">
+      <Unit0>
+        <Filename Value="Zeus.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Zeus"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmPrincipal"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Principal"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="datamodule.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DM"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="DataModule"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="funcoes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FNC"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Funcoes"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="selper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSelPer"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SelPer"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="config.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmConfig"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Config"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="selfil.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmSelFil"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="selfil"/>
+      </Unit6>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <Target>
+      <Filename Value="Zeus"/>
+    </Target>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+    </SearchPaths>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerMessages>
+        <MsgFileName Value=""/>
+      </CompilerMessages>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="4">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+      <Item4>
+        <Name Value="EParserError"/>
+      </Item4>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

@@ -1,0 +1,8 @@
+object FNC: TFNC
+  Left = 501
+  Height = 291
+  Top = 280
+  Width = 521
+  Caption = 'Funções'
+  LCLVersion = '1.2.6.0'
+end

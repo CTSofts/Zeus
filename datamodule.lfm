@@ -1,0 +1,335 @@
+object DM: TDM
+  OldCreateOrder = False
+  Height = 284
+  HorizontalOffset = 789
+  VerticalOffset = 173
+  Width = 411
+  object ODBCConnection1: TODBCConnection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'protheus'
+    KeepConnection = False
+    Password = 'j159753'
+    Transaction = SQLTransaction1
+    UserName = 'sa'
+    HostName = 'localhost'
+    LogEvents = []
+    FileDSN = 'Protheus'
+    left = 64
+    top = 40
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    FieldDefs = <    
+      item
+        Name = 'E2_FILIAL1'
+        DataType = ftString
+        Precision = -1
+        Size = 4
+      end    
+      item
+        Name = 'E2_NUM1'
+        DataType = ftString
+        Precision = -1
+        Size = 9
+      end    
+      item
+        Name = 'E2_PARCELA1'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'E2_TIPO1'
+        DataType = ftString
+        Precision = -1
+        Size = 3
+      end    
+      item
+        Name = 'E2_NATUREZ1'
+        DataType = ftString
+        Precision = -1
+        Size = 10
+      end    
+      item
+        Name = 'E2_FORNECE1'
+        DataType = ftString
+        Precision = -1
+        Size = 6
+      end    
+      item
+        Name = 'E2_NOMFOR1'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'E2_VENCREA'
+        DataType = ftString
+        Precision = -1
+        Size = 8
+      end    
+      item
+        Name = 'E2_VALOR1'
+        DataType = ftFloat
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'E2_BAIXA1'
+        DataType = ftString
+        Precision = -1
+        Size = 8
+      end    
+      item
+        Name = 'D_E_L_E_T_'
+        DataType = ftString
+        Precision = -1
+        Size = 1
+      end    
+      item
+        Name = 'ED_DESCRIC'
+        DataType = ftString
+        Precision = -1
+        Size = 30
+      end>
+    Database = ODBCConnection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'Select'
+      'SE2010.E2_FILIAL As E2_FILIAL1,'
+      'SE2010.E2_NUM As E2_NUM1,'
+      'SE2010.E2_PARCELA As E2_PARCELA1,'
+      'SE2010.E2_TIPO As E2_TIPO1,'
+      'SE2010.E2_NATUREZ As E2_NATUREZ1,'
+      'SE2010.E2_FORNECE As E2_FORNECE1,'
+      'SE2010.E2_NOMFOR As E2_NOMFOR1,'
+      'SE2010.E2_VENCREA As E2_VENCREA,'
+      'SE2010.E2_VALOR As E2_VALOR1,'
+      'SE2010.E2_BAIXA As E2_BAIXA1,'
+      'SE2010.D_E_L_E_T_,'
+      'SED010.ED_DESCRIC'
+      'From'
+      'SE2010 Inner Join'
+      'SED010 On SED010.ED_CODIGO = SE2010.E2_NATUREZ'
+      'Where'
+      '((SE2010.E2_FILIAL = ''0202'') Or'
+      '(SE2010.E2_FILIAL = ''0107'')) And'
+      '(SE2010.D_E_L_E_T_ <> ''*'') AND'
+      '(SE2010.E2_VENCREA >= ''20150101'') AND'
+      '(SE2010.E2_VENCREA <= ''20150131'')'
+      'Order By'
+      'SE2010.E2_NATUREZ,'
+      'SE2010.E2_NOMFOR,'
+      'SE2010.E2_VENCREA'
+    )
+    Params = <>
+    left = 64
+    top = 128
+    object SQLQuery1E2_FILIAL1: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'E2_FILIAL1'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 4
+    end
+    object SQLQuery1E2_NUM1: TStringField
+      DisplayWidth = 9
+      FieldKind = fkData
+      FieldName = 'E2_NUM1'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 9
+    end
+    object SQLQuery1E2_PARCELA1: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'E2_PARCELA1'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object SQLQuery1E2_TIPO1: TStringField
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'E2_TIPO1'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 3
+    end
+    object SQLQuery1E2_NATUREZ1: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'E2_NATUREZ1'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 10
+    end
+    object SQLQuery1E2_FORNECE1: TStringField
+      DisplayWidth = 6
+      FieldKind = fkData
+      FieldName = 'E2_FORNECE1'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 6
+    end
+    object SQLQuery1E2_NOMFOR1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'E2_NOMFOR1'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+    end
+    object SQLQuery1E2_VALOR1: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'E2_VALOR1'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = -1
+    end
+    object SQLQuery1E2_BAIXA1: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'E2_BAIXA1'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 8
+    end
+    object SQLQuery1D_E_L_E_T_: TStringField
+      DisplayWidth = 1
+      FieldKind = fkData
+      FieldName = 'D_E_L_E_T_'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 1
+    end
+    object SQLQuery1ED_DESCRIC: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'ED_DESCRIC'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = []
+      ReadOnly = False
+      Required = True
+      Size = 30
+    end
+    object SQLQuery1E2_VENCREA: TStringField
+      DisplayWidth = 8
+      FieldKind = fkData
+      FieldName = 'E2_VENCREA'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 8
+    end
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = ODBCConnection1
+    left = 160
+    top = 40
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    OnGetValue = frReport1GetValue
+    left = 160
+    top = 128
+  end
+  object frDBDataSet1: TfrDBDataSet
+    DataSet = SQLQuery1
+    left = 160
+    top = 192
+  end
+  object dbfiliais: TDbf
+    FilePath = 'C:\totvs11\microsiga\protheus\protheus_data\system\'
+    IndexDefs = <>
+    TableName = 'xx8.dbf'
+    TableLevel = 4
+    Filter = 'XX8_EMPR>'''''
+    Filtered = True
+    FilterOptions = []
+    left = 272
+    top = 40
+    object dbfiliaisXX8_EMPR: TStringField
+      DisplayLabel = 'E'
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'XX8_EMPR'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object dbfiliaisXX8_CODIGO: TStringField
+      DisplayLabel = 'F'
+      DisplayWidth = 3
+      FieldKind = fkData
+      FieldName = 'XX8_CODIGO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 12
+    end
+    object dbfiliaisXX8_DESCRI: TStringField
+      DisplayLabel = 'Razão Social'
+      DisplayWidth = 40
+      FieldKind = fkData
+      FieldName = 'XX8_DESCRI'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 40
+    end
+  end
+  object frCSVExport1: TfrCSVExport
+    left = 272
+    top = 128
+  end
+end
